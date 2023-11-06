@@ -12,7 +12,7 @@ func LoadConfig() (config Config, err error) {
 	viper.SetConfigName("dev")
 	viper.SetConfigType("env")
 	viper.AutomaticEnv()
-	err = viper.ReadConfig()
+	err = viper.ReadInConfig()
 	if err != nil {
 		return
 	}
